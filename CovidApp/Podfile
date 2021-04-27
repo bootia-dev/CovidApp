@@ -1,0 +1,10 @@
+platform :ios, '13.0'
+inhibit_all_warnings!
+
+target 'CovidApp' do
+  use_frameworks!
+  pod 'Alamofire', '~> 5.0'
+  pod 'SwiftLint'
+  pod 'ADCountryPicker', '~> 2.1.0'
+  pod 'FSCalendar'
+end

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ResultView" customModule="CovidApp" customModuleProvider="target">
+            <connections>
+                <outlet property="confirmedView" destination="cTM-Oz-3d5" id="5ax-Tf-UTm"/>
+                <outlet property="contentView" destination="iN0-l3-epB" id="Wh3-q6-Mbt"/>
+                <outlet property="deathsView" destination="jZj-Qf-9KK" id="Gtq-OO-SCM"/>
+                <outlet property="recoveredView" destination="qWp-rB-MO1" id="M4g-11-mYp"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="389" height="176"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="sVr-mM-SPF">
+                    <rect key="frame" x="0.0" y="0.0" width="389" height="176"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cTM-Oz-3d5" customClass="SingleDataView" customModule="CovidApp" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="124.5" height="176"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jZj-Qf-9KK" customClass="SingleDataView" customModule="CovidApp" customModuleProvider="target">
+                            <rect key="frame" x="132.5" y="0.0" width="124" height="176"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qWp-rB-MO1" customClass="SingleDataView" customModule="CovidApp" customModuleProvider="target">
+                            <rect key="frame" x="264.5" y="0.0" width="124.5" height="176"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        </view>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="jZj-Qf-9KK" firstAttribute="width" secondItem="cTM-Oz-3d5" secondAttribute="width" id="E1G-gL-5aD"/>
+                        <constraint firstItem="qWp-rB-MO1" firstAttribute="width" secondItem="cTM-Oz-3d5" secondAttribute="width" id="dnM-44-e4k"/>
+                    </constraints>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="sVr-mM-SPF" secondAttribute="bottom" id="KaB-gm-ISK"/>
+                <constraint firstItem="sVr-mM-SPF" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="SRn-ub-Zjx"/>
+                <constraint firstAttribute="trailing" secondItem="sVr-mM-SPF" secondAttribute="trailing" id="Tpk-dU-3Cc"/>
+                <constraint firstItem="sVr-mM-SPF" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="sLH-2m-mvV"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="119.56521739130436" y="-152.67857142857142"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

@@ -1,0 +1,28 @@
+PODS:
+  - ADCountryPicker (2.1.0)
+  - Alamofire (5.4.3)
+  - FSCalendar (2.8.2)
+  - SwiftLint (0.43.1)
+
+DEPENDENCIES:
+  - ADCountryPicker (~> 2.1.0)
+  - Alamofire (~> 5.0)
+  - FSCalendar
+  - SwiftLint
+
+SPEC REPOS:
+  trunk:
+    - ADCountryPicker
+    - Alamofire
+    - FSCalendar
+    - SwiftLint
+
+SPEC CHECKSUMS:
+  ADCountryPicker: 502cee76a30ea1c3834eb0df170ce635691655c9
+  Alamofire: e447a2774a40c996748296fa2c55112fdbbc42f9
+  FSCalendar: e6a2eb9c571bf0719ed797ef807e08426753c241
+  SwiftLint: 99f82d07b837b942dd563c668de129a03fc3fb52
+
+PODFILE CHECKSUM: 704b2fc4855a4cd1d21b80ab141bc474c20fdfb3
+
+COCOAPODS: 1.10.1

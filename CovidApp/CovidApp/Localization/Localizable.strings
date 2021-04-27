@@ -1,0 +1,28 @@
+/* 
+  Localizable.strings
+  CovidApp
+
+  Created by Diego Varangot on 24/4/21.
+  
+*/
+
+// Screen titles
+"home_screen_title" = "Home";
+"date_picker_title" = "Date Picker";
+
+// Home VC strings
+"home_location_title" = "Location";
+"home_location_none" = "Global";
+"home_from_date_title" = "From";
+"home_to_date_title" = "To";
+"home_filter_no_value" = "-";
+
+// Date Picker VC strings
+"date_picker_cancel_button_title" = "Cancel";
+"date_picker_confirm_button_title" = "Confirm";
+
+// Single View
+"single_view_recovered_title" = "Recovered";
+"single_view_confirmed_title" = "Confirmed";
+"single_view_deaths_title" = "Deaths";
+"single_view_no_value" = "-";

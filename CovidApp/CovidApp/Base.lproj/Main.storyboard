@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ucl-7Z-hj6">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="pd2-1P-rwu">
+            <objects>
+                <navigationController id="ucl-7Z-hj6" customClass="NavigationController" customModule="CovidApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="nqd-ga-RTL">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="N8C-ae-8Cw"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rfB-Nm-94i" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1080" y="89"/>
+        </scene>
+        <!--Home View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="HomeViewController" customModule="CovidApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="1rf-lO-8eB">
+                                <rect key="frame" x="16" y="108" width="382" height="56"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ymY-Ma-RFc" customClass="SingleDataView" customModule="CovidApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="185" height="56"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8DI-cu-zE6" customClass="SingleDataView" customModule="CovidApp" customModuleProvider="target">
+                                        <rect key="frame" x="191" y="0.0" width="92.5" height="56"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rg7-OV-1hu" customClass="SingleDataView" customModule="CovidApp" customModuleProvider="target">
+                                        <rect key="frame" x="289.5" y="0.0" width="92.5" height="56"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="8DI-cu-zE6" firstAttribute="width" secondItem="ymY-Ma-RFc" secondAttribute="width" multiplier="1:2" id="43c-aK-8aH"/>
+                                    <constraint firstAttribute="height" constant="56" id="Tia-Fw-JLo"/>
+                                    <constraint firstItem="rg7-OV-1hu" firstAttribute="width" secondItem="8DI-cu-zE6" secondAttribute="width" id="acI-db-wpO"/>
+                                </constraints>
+                            </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bmr-vF-neb" customClass="ResultView" customModule="CovidApp" customModuleProvider="target">
+                                <rect key="frame" x="16" y="180" width="382" height="75"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="75" id="jgA-n0-DDs"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="bmr-vF-neb" firstAttribute="leading" secondItem="1rf-lO-8eB" secondAttribute="leading" id="41W-Gr-4ZA"/>
+                            <constraint firstItem="1rf-lO-8eB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="9j8-UR-021"/>
+                            <constraint firstItem="1rf-lO-8eB" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="JMy-Sc-Y8Q"/>
+                            <constraint firstItem="bmr-vF-neb" firstAttribute="trailing" secondItem="1rf-lO-8eB" secondAttribute="trailing" id="KQP-U3-4li"/>
+                            <constraint firstItem="bmr-vF-neb" firstAttribute="top" secondItem="1rf-lO-8eB" secondAttribute="bottom" constant="16" id="kfT-mY-kFC"/>
+                            <constraint firstItem="1rf-lO-8eB" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" constant="-16" id="pu5-BR-bG7"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="9w6-wz-6Up"/>
+                    <connections>
+                        <outlet property="fromDateView" destination="8DI-cu-zE6" id="tc2-O2-j4z"/>
+                        <outlet property="locationView" destination="ymY-Ma-RFc" id="mHk-Zk-hTa"/>
+                        <outlet property="resultView" destination="bmr-vF-neb" id="c2x-Z8-puQ"/>
+                        <outlet property="toDateView" destination="rg7-OV-1hu" id="Swf-Go-anj"/>
+                        <segue destination="1cy-dS-sOg" kind="presentation" identifier="pickDate" modalPresentationStyle="automatic" modalTransitionStyle="coverVertical" id="hm0-9U-FIC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-362" y="88"/>
+        </scene>
+        <!--Date Picker View Controller-->
+        <scene sceneID="qEO-tS-TfI">
+            <objects>
+                <viewController id="1cy-dS-sOg" customClass="DatePickerViewController" customModule="CovidApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fXG-e1-JAa">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pj4-ec-voS" customClass="FSCalendar">
+                                <rect key="frame" x="16" y="40" width="382" height="656"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="1cy-dS-sOg" id="jxd-jI-USp"/>
+                                    <outlet property="delegate" destination="1cy-dS-sOg" id="Vu7-7c-6Wa"/>
+                                </connections>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="Lm8-As-w30">
+                                <rect key="frame" x="16" y="736" width="382" height="56"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s1Z-44-VJj">
+                                        <rect key="frame" x="0.0" y="0.0" width="183" height="56"/>
+                                        <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="cancelAction:" destination="1cy-dS-sOg" eventType="touchUpInside" id="My1-jX-Hol"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GD2-GX-b6b">
+                                        <rect key="frame" x="199" y="0.0" width="183" height="56"/>
+                                        <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="confirmAction:" destination="1cy-dS-sOg" eventType="touchUpInside" id="WP9-Vi-6CO"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="56" id="2gD-Ax-OuP"/>
+                                    <constraint firstItem="GD2-GX-b6b" firstAttribute="width" secondItem="s1Z-44-VJj" secondAttribute="width" id="Zb2-5S-1hZ"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="5ch-Pb-Wg7"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Lm8-As-w30" firstAttribute="top" secondItem="pj4-ec-voS" secondAttribute="bottom" constant="40" id="249-Vn-QRW"/>
+                            <constraint firstItem="pj4-ec-voS" firstAttribute="leading" secondItem="5ch-Pb-Wg7" secondAttribute="leading" constant="16" id="4ei-Yz-7aN"/>
+                            <constraint firstItem="pj4-ec-voS" firstAttribute="top" secondItem="5ch-Pb-Wg7" secondAttribute="top" constant="40" id="DFA-7M-Cce"/>
+                            <constraint firstItem="Lm8-As-w30" firstAttribute="leading" secondItem="5ch-Pb-Wg7" secondAttribute="leading" constant="16" id="NvH-rd-8vk"/>
+                            <constraint firstItem="Lm8-As-w30" firstAttribute="trailing" secondItem="5ch-Pb-Wg7" secondAttribute="trailing" constant="-16" id="QSU-4o-NqZ"/>
+                            <constraint firstItem="Lm8-As-w30" firstAttribute="bottom" secondItem="5ch-Pb-Wg7" secondAttribute="bottom" constant="-16" id="eUY-sz-Zkp"/>
+                            <constraint firstItem="pj4-ec-voS" firstAttribute="trailing" secondItem="5ch-Pb-Wg7" secondAttribute="trailing" constant="-16" id="uko-L7-D9q"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="calendarView" destination="pj4-ec-voS" id="4k3-wW-Jud"/>
+                        <outlet property="cancelButton" destination="s1Z-44-VJj" id="1Tx-at-WqA"/>
+                        <outlet property="confirmButton" destination="GD2-GX-b6b" id="o6d-sZ-uFM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hZr-u1-0Ux" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-362.31884057971018" y="797.54464285714278"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
